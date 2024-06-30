@@ -5,10 +5,8 @@
   >
     <router-view />
   </section>
-  <footer
-    class="bg-white px-[5%] flex-col-reverse text-center items-center h-10"
-  >
-    <p class="text-lg">
+  <footer>
+    <p class="text-lg text-center sm:text-left">
       copyright @
       <strong class="text-red-500 font-extrabold">mahmoud ramadan</strong>
     </p>
@@ -40,4 +38,19 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style>
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+@media (min-width: 640px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 5%;
+  }
+}
+</style>
